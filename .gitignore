@@ -1,0 +1,35 @@
+# Byte-kompilerede filer
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / builds
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtuelle miljøer
+.venv/
+venv/
+env/
+ENV/
+
+# Test og værktøjscache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Miljøvariabler
+.env
+.env.local
+
+# Editor og OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
