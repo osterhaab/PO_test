@@ -51,13 +51,16 @@ Produktanalyse (10 produkter)
 
 Kategori         Antal      Gns. pris
 -------------------------------------
-Elektronik           3      466.15 kr
-Fritid               1      599.00 kr
-Kontor               3      172.82 kr
-Køkken               3      162.65 kr
+Elektronik           3      466,15 kr
+Fritid               1      599,00 kr
+Kontor               3      172,82 kr
+Køkken               3      162,65 kr
 -------------------------------------
-I alt               10      300.39 kr
+I alt               10      300,39 kr
 ```
+
+Beløb vises med to decimaler og dansk decimalkomma. Selve CSV-filen bruger
+punktum som decimalseparator, så den fortsat kan læses direkte som tal.
 
 Scriptet finder datafilen relativt til `analyse.py`, så det virker også hvis du
 kalder det med en fuld sti, fx `python3 /sti/til/PO_test/analyse.py`.

@@ -37,6 +37,11 @@ def opsummer_pr_kategori(produkter):
     }
 
 
+def dansk_pris(vaerdi):
+    """Formaterer et beløb med to decimaler og dansk decimalkomma."""
+    return f"{vaerdi:.2f}".replace(".", ",")
+
+
 def main():
     if not CSV_STI.exists():
         print(f"Fandt ikke datafilen: {CSV_STI}", file=sys.stderr)
@@ -53,11 +58,11 @@ def main():
     print(f"{'Kategori':<15}{'Antal':>7}{'Gns. pris':>15}")
     print("-" * 37)
     for kategori, (antal, gns) in opsummering.items():
-        print(f"{kategori:<15}{antal:>7}{gns:>12.2f} kr")
+        print(f"{kategori:<15}{antal:>7}{dansk_pris(gns):>12} kr")
     print("-" * 37)
 
     samlet_gns = sum(p["pris"] for p in produkter) / len(produkter)
-    print(f"{'I alt':<15}{len(produkter):>7}{samlet_gns:>12.2f} kr")
+    print(f"{'I alt':<15}{len(produkter):>7}{dansk_pris(samlet_gns):>12} kr")
     return 0
 
 
